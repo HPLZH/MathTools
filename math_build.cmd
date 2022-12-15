@@ -1,0 +1,1 @@
+dotnet script publish -o . math.csx
