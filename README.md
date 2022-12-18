@@ -73,7 +73,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download)
 
-### [Windows Powershell](https://learn.microsoft.com/zh-cn/powershell/)
+### [Windows Powershell](https://learn.microsoft.com/powershell/)
 
 运行命令翻译器和运行工具所需
 
