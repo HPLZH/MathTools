@@ -85,4 +85,88 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 ## 使用说明
 
-未完待续
+### 数学命令的参数
+
+| 功能       | 命令名称      | 参数               |
+|:--------:|:---------:|----------------|
+| 求导数      | diff      | x                |
+| 求导函数     | diff      |                  |
+| 求n阶导数    | diffn     | n x              |
+| 求n阶导函数   | diffn     | n                |
+| 求极限      | lim       | x                |
+| 求左极限      | lim       | x -              |
+| 求右极限      | lim       | x +              |
+| 求不定积分    | integrate |                  |
+| 求定积分     | integrate | a ~ b            |
+| 求泰勒多项式   | series    | n x<sub>0</sub>  |
+| 求麦克劳林多项式 | series    | n                |
+| 解单个方程    | solve     |                  |
+| 求解集      | solveset  |                  |
+| 绘图（默认范围） | draw      |                  |
+| 绘图（a~b）  | draw      | a b              |
+| 求函数值     | fx        | x                |
+| 计算       | calc      |                  |
+
+### Python
+
+用法：
+
+`python -m <name> [funcs] [args]`
+
+`<name>` : 命令名称
+`[func]` : 可选，要处理的函数表达式
+`[args]` : 参数
+
+例：`python -m lim "sin(x)/x" "cos(x)" 0`
+
+要处理的函数表达式可以通过管道传入，例如：
+
+`Write-Output "sin(x)/x" | python -m lim 0`
+
+多个命令可以串联执行：
+
+`Write-Output "sin(x)" | python -m diff | python -m lim 0`
+
+### 命令翻译器
+
+令 `command` = `<name> [funcs] [args]`
+
+`<name>` : 命令名称
+`[func]` : 可选，要处理的函数表达式（正常情况下不要使用）
+`[args]` : 参数
+
+用法：
+
+`./math [funcs] <command> [command ...]`
+
+`./math.exe [funcs] <command> [command ...]`
+
+`dotnet script ./math.csx -- [funcs] <command> [command ...]`
+
+`[func]` : 可选，要处理的函数表达式
+
+例：`./math "sin(x)" "cos(x)" diffn 2 lim 0`
+
+要处理的函数表达式可以通过管道传入，例如：
+
+`Write-Output "sin(x)" "cos(x)" | ./math diffn 2 lim 0`
+
+多个命令可以串联执行，但没有这个必要
+
+### 运行工具
+
+双击运行`mathIn.cmd`
+
+然后控制台窗口中出现 `Command : `
+
+然后输入命令，语法类似于命令翻译器：
+
+`Command : <command> [command ...]`
+
+例：`Command : diffn 2 lim 0`
+
+（开头的`Command : `是程序输出的，不需要输入）
+
+按下 Enter 完成输入后，在新打开的 VS Code 窗口中输入要处理的函数表达式，一行一个
+
+在关闭 VS Code 窗口后，等待一小段时间，然后在新打开的 VS Code 窗口中查看结果
