@@ -1,4 +1,6 @@
 import sys
+from sympy.abc import *
+from sympy import *
 
 __in = [] if sys.stdin.isatty() else [s.strip() for s in sys.stdin.readlines()]
 __arg = sys.argv[1:]

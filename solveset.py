@@ -7,7 +7,7 @@ for _f in fs:
     try:
         fx = sympify(_f)
         eqfx = Eq(fx, 0)
-        sset = solveset(eqfx, x, domain=Reals)
+        sset = solveset(eqfx, x)
     except Exception as _e:
         print("ERROR")
         print(_e, file=lib.cmdin.sys.stderr)
