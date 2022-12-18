@@ -61,7 +61,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 需要调整环境变量使其Python解释器在Path路径内
 
-### .NET 6
+### [.NET 6](https://dotnet.microsoft.com/)
 
 运行命令翻译器和运行工具所需
 
@@ -73,7 +73,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download)
 
-### Windows Powershell
+### [Windows Powershell](https://learn.microsoft.com/zh-cn/powershell/)
 
 运行命令翻译器和运行工具所需
 
@@ -114,7 +114,9 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 `python -m <name> [funcs] [args]`
 
 `<name>` : 命令名称
+
 `[func]` : 可选，要处理的函数表达式
+
 `[args]` : 参数
 
 例：`python -m lim "sin(x)/x" "cos(x)" 0`
@@ -132,7 +134,9 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 令 `command` = `<name> [funcs] [args]`
 
 `<name>` : 命令名称
+
 `[func]` : 可选，要处理的函数表达式（正常情况下不要使用）
+
 `[args]` : 参数
 
 用法：
