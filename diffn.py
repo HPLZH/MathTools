@@ -33,7 +33,7 @@ else:
 fs = lib.cmdin.inputs
 for _f in fs:
     try:
-        fx = sympify(f)
+        fx = sympify(_f)
         df = diff(fx, x, _n)
         if sx:
             df = df.subs(x, x0)
