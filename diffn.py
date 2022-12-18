@@ -1,7 +1,7 @@
 from sympy.abc import *
 from sympy import *
 import lib.cmdin
-def int_s(x): return int(str(x))
+def int_s(_x): return int(str(_x))
 
 
 sx = False

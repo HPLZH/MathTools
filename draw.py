@@ -4,19 +4,10 @@ import logging
 import lib.cmdin
 sx = False
 _a, _b = -1, 1
-if len(lib.cmdin.rin) == 0:
-    lib.cmdin.set_patterns([str, object, object], [str])
-    if len(lib.cmdin.args) == 2:
-        sx = True
-else:
-    lib.cmdin.set_patterns([object, object], [])
-    if len(lib.cmdin.args) == 2:
-        sx = True
-if sx:
-    lib.cmdin.set_patterns([object, object])
+lib.cmdin.set_patterns([float, float], [])
+if len(lib.cmdin.args) == 2:
+    sx = true
     _a, _b = lib.cmdin.args
-else:
-    lib.cmdin.set_patterns([])
 
 fs = lib.cmdin.inputs
 fxs = []

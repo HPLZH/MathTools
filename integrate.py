@@ -4,19 +4,18 @@ import logging
 import lib.cmdin
 sx = False
 _a, _b = -1, 1
-if len(lib.cmdin.rin) == 0:
-    lib.cmdin.set_patterns([str, object, object], [str])
-    if len(lib.cmdin.args) == 2:
-        sx = True
-else:
-    lib.cmdin.set_patterns([object, object], [])
-    if len(lib.cmdin.args) == 2:
-        sx = True
-if sx:
-    lib.cmdin.set_patterns([object, object])
-    _a, _b = lib.cmdin.args
-else:
-    lib.cmdin.set_patterns([])
+
+
+def wsep(_s):
+    if _s == "~":
+        return "~"
+    else:
+        raise Exception()
+
+lib.cmdin.set_patterns([object,wsep,object],[])
+if len(lib.cmdin.args) == 3:
+    sx = True
+    _a, _, _b = lib.cmdin.args
 
 fs = lib.cmdin.inputs
 for _f in fs:

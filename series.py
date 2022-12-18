@@ -3,7 +3,7 @@ from sympy import *
 import lib.cmdin
 
 
-def int_s(x): return int(str(x))
+def int_s(_x): return int(str(_x))
 
 
 lib.cmdin.set_patterns([int_s, object], [int_s])
