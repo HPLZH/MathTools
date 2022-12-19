@@ -71,7 +71,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 若要编译命令翻译器，则可能需要SDK
 
-可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download)
+可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download/)
 
 ### [Windows Powershell](https://learn.microsoft.com/powershell/)
 
@@ -82,6 +82,14 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 如果使用 GNU/Linux 或 macOS 并且想使用命令翻译器，请尝试将 math.csx 第40行的`powershell`改成`pwsh`，并安装 Powershell
 
 如果使用 GNU/Linux 或 macOS 并且还想使用运行工具，你需要对 mathIn.ps1 第6行进行适当修改
+
+### [Visual Studio Code](https://code.visualstudio.com/)
+
+这是运行工具调用的文本编辑器
+
+可以通过修改 mathIn.ps1 修改使用的文本编辑器
+
+可以从 Microsoft Store 获取
 
 ## 使用说明
 
