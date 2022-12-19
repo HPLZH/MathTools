@@ -6,7 +6,7 @@ sx = False
 _a, _b = -1, 1
 lib.cmdin.set_patterns([float, float], [])
 if len(lib.cmdin.args) == 2:
-    sx = true
+    sx = True
     _a, _b = lib.cmdin.args
 
 fs = lib.cmdin.inputs
