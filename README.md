@@ -17,6 +17,55 @@
 - 命令翻译器 (简化命令的输入)
 - 运行工具 (提供对用户更加友好的操作方式)
 
+## 系统要求
+
+### 基础计算
+
+- 推荐
+  - Windows 11
+  - Windows 10
+  - GNU/Linux
+- 支持
+  - Android + Termux
+  - MacOS
+- 已终止支持
+  - Windows 7
+  - Windows Vista
+
+### 绘图
+
+- 推荐
+  - Windows 11
+  - Windows 10
+- 支持
+  - GNU/Linux
+  - MacOS
+- 已终止支持
+  - Windows 7
+  - Windows Vista
+
+### 命令翻译器
+
+- 推荐
+  - Windows 11
+  - Windows 10
+- 已终止支持
+  - Windows 7
+- 需要修改
+  - GNU/Linux
+  - MacOS
+
+### 运行工具
+
+- 推荐
+  - Windows 11
+  - Windows 10
+- 已终止支持
+  - Windows 7
+- 需要修改
+  - GNU/Linux
+  - MacOS 
+
 ## 依赖项
 
 ### [Python](https://www.python.org/)
@@ -71,7 +120,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 
 若要编译命令翻译器，则可能需要SDK
 
-可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download/)
+可以从Microsoft的网站[下载](https://dotnet.microsoft.com/download)
 
 ### [Windows Powershell](https://learn.microsoft.com/powershell/)
 
@@ -90,6 +139,103 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 可以通过修改 mathIn.ps1 修改使用的文本编辑器
 
 可以从 Microsoft Store 获取
+
+## 安装方法
+
+### 安装 Python
+
+如果运行以下命令，能正常显示Python版本，则Python已安装
+
+`python --version`
+
+（输出示例：`Python 3.11`，输出随Python版本变化）
+
+从 Microsoft Store 获取即可
+
+- [Python 3.11](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K)
+- [Python 3.10](https://apps.microsoft.com/store/detail/python-310/9PJPW5LDXLZ5)
+- [Python 3.9](https://apps.microsoft.com/store/detail/python-39/9P7QFQMJRFP7)
+- [Python 3.8](https://apps.microsoft.com/store/detail/python-38/9MSSZTT1N39L)
+- [Python 3.7](https://apps.microsoft.com/store/detail/python-37/9NJ46SX7X90P)
+
+或者从[python.org](https://www.python.org/)获取
+
+### 安装 SymPy 和 Matplotlib
+
+可以通过以下命令列出已安装的Python软件包
+
+`pip list`
+
+运行以下命令安装SymPy和Matplotlib
+
+`pip install sympy`
+
+`pip install matplotlib`
+
+### 获取数学工具（不含编译好的命令翻译器）
+
+#### 方法1：下载压缩包
+
+在页面的上部找到绿色的 Code 按钮，然后点击下拉列表的最后一项 Download ZIP
+
+#### 方法2：通过 Git 获取
+
+假设需要把工具安装在 `<path>/MathTools`
+
+1. `cd <path>`
+2. `git clone https://github.com/HPLZH/MathTools.git`
+
+##### 附：安装 Git
+
+如果运行以下命令，能正常显示Git版本，则Git已安装
+
+`git --version`
+
+（输出示例：`git version 2.39.0.windows.1`，输出随Git版本变化）
+
+运行以下命令安装Git
+
+`winget install --id Git.Git -e --source winget`
+
+### 安装 .NET 6
+
+可以通过以下命令列出.NET安装信息
+
+`dotnet --info`
+
+运行以下命令安装 .NET 6 Runtime
+
+`winget install Microsoft.DotNet.Runtime.6`
+
+运行以下命令安装 .NET 6 SDK
+
+`winget install Microsoft.DotNet.SDK.6`
+
+### 获取命令翻译器
+
+#### 方法1：下载二进制文件
+
+在页面右侧找到 Releases, 下载最新版本
+
+然后将其中的文件解压到 MathTools 文件夹
+
+注意，解压时应该解压到`.../MathTools/`而不是`.../MathTools/math/`
+
+#### 方法2：使用 dotnet-script 编译
+
+在安装了 dotnet-script 之后使用 math_build.cmd 编译
+
+##### 附：安装 dotnet-script
+
+如果运行以下命令，能正常显示dotnet-script版本，则dotnet-script已安装
+
+`dotnet script --version`
+
+（输出示例：`1.4.0`，输出随dotnet-script版本变化）
+
+运行以下命令安装（需要 .NET 6 SDK）
+
+`dotnet tool install dotnet-script -g`
 
 ## 使用说明
 
