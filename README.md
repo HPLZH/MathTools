@@ -253,7 +253,7 @@ Anaconda 包括了 Python, SymPy, Matplotlib
 | 求左极限      | lim       | x -              |
 | 求右极限      | lim       | x +              |
 | 求不定积分    | integrate |                  |
-| 求定积分     | integrate | a ~ b            |
+| 求定积分     | integrate | a to b            |
 | 求泰勒多项式   | series    | n x<sub>0</sub>  |
 | 求麦克劳林多项式 | series    | n                |
 | 解单个方程    | solve     |                  |

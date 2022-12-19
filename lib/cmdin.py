@@ -28,7 +28,10 @@ def __d(p: list):
             if p[i] == str:
                 args.insert(0, __arg[i])
                 continue
-            __r = eval(__arg[i])
+            if ISkipEval in p[i].mro():
+                __r = __arg[i]
+            else:
+                __r = eval(__arg[i])
             if p[i]!=object:
                 __r = p[i](__r)
             args.insert(0, __r)
@@ -60,3 +63,6 @@ def add_patterns(*patterns):
     global __patterns
     __patterns += list(patterns)
     __ds()
+
+class ISkipEval:
+    pass

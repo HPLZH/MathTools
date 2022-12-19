@@ -5,14 +5,13 @@ import lib.cmdin
 sx = False
 _a, _b = -1, 1
 
+class tosep(lib.cmdin.ISkipEval):
+    def __init__(self, _s):
+        super().__init__()
+        if _s != "to":
+            raise Exception()
 
-def wsep(_s):
-    if _s == "~":
-        return "~"
-    else:
-        raise Exception()
-
-lib.cmdin.set_patterns([object,wsep,object],[])
+lib.cmdin.set_patterns([object,tosep,object],[])
 if len(lib.cmdin.args) == 3:
     sx = True
     _a, _, _b = lib.cmdin.args
